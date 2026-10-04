@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulangerie Artisanale de Soual</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fa-solid fa-wheat-awn"></i>
+                <span>La Fournée de Soual</span>
+            </div>
+            <nav class="nav">
+                <button class="nav-btn active" data-tab="histoire">
+                    <i class="fa-solid fa-book-open"></i> Notre Histoire
+                </button>
+                <button class="nav-btn" data-tab="horaires">
+                    <i class="fa-solid fa-clock"></i> Horaires & Accès
+                </button>
+                <button class="nav-btn" data-tab="photos">
+                    <i class="fa-solid fa-camera"></i> Galerie Photos
+                </button>
+                <button class="nav-btn" data-tab="contact">
+                    <i class="fa-solid fa-envelope"></i> Contact
+                </button>
+            </nav>
+            <div class="menu-toggle" id="mobile-menu">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-container">
+
+        <!-- TAB 1: HISTOIRE -->
+        <section id="histoire" class="tab-content active">
+            <div class="hero-banner">
+                <div class="hero-content">
+                    <h1>L'Art du Bon Pain à Soual</h1>
+                    <p>Un savoir-faire artisanal transmis avec passion au cœur du Tarn depuis des générations.</p>
+                </div>
+            </div>
+            <div class="container section-padding">
+                <div class="grid-2">
+                    <div class="text-content">
+                        <h2>Notre Tradition Artisanale</h2>
+                        <p>Née au cœur du village de Soual, notre boulangerie met à l'honneur le respect du produit et le temps long. Chaque pain est façonné à la main, pétri avec des farines locales rigoureusement sélectionnées et pétri sur levain naturel.</p>
+                        <p>Nous croyons fermement qu'un grand pain demande de la patience : une longue fermentation lente pour développer des arômes incomparables, une mie alvéolée et une croûte croustillante qui craque sous la dent.</p>
+                        <div class="features-badge">
+                            <div class="badge-item">
+                                <i class="fa-solid fa-seedling"></i>
+                                <span>Farines 100% Locales</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fa-solid fa-fire-burner"></i>
+                                <span>Cuisson au Fournil</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fa-solid fa-hand-holding-heart"></i>
+                                <span>Fait Maison</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="image-box">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=80" alt="Pétrissage du pain" class="rounded-img shadow">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: HORAIRES & ACCÈS -->
+        <section id="horaires" class="tab-content">
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h2>Horaires & Localisation</h2>
+                    <p>Venez nous rendre visite au centre de Soual pour découvrir nos nouveautés du jour.</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card shadow">
+                        <h3><i class="fa-regular fa-clock"></i> Horaires d'Ouverture</h3>
+                        <ul class="schedule-list">
+                            <li><span>Lundi</span> <strong>06:30 - 13:00 | 16:00 - 19:30</strong></li>
+                            <li><span>Mardi</span> <strong>06:30 - 13:00 | 16:00 - 19:30</strong></li>
+                            <li><span>Mercredi</span> <strong>Fermé</strong></li>
+                            <li><span>Jeudi</span> <strong>06:30 - 13:00 | 16:00 - 19:30</strong></li>
+                            <li><span>Vendredi</span> <strong>06:30 - 13:00 | 16:00 - 19:30</strong></li>
+                            <li><span>Samedi</span> <strong>06:30 - 13:30 | 16:00 - 19:30</strong></li>
+                            <li><span>Dimanche</span> <strong>07:00 - 13:00</strong></li>
+                        </ul>
+                    </div>
+                    <div class="card shadow">
+                        <h3><i class="fa-solid fa-location-dot"></i> Nous Trouver</h3>
+                        <p class="address-text">
+                            <strong>Boulangerie La Fournée de Soual</strong><br>
+                            Avenue de Castres<br>
+                            81580 Soual, Tarn, France
+                        </p>
+                        <div class="map-placeholder">
+                            <i class="fa-solid fa-map-location-dot"></i>
+                            <p>Située au cœur de Soual, facile d'accès avec stationnement minute devant la boutique.</p>
+                        </div>
+                        <a href="https://maps.google.com/?q=Soual+81580" target="_blank" class="btn-primary">
+                            <i class="fa-solid fa-diamond-turn-right"></i> Ouvrir dans Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: PHOTOS -->
+        <section id="photos" class="tab-content">
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h2>Notre Galerie Gourmande</h2>
+                    <p>Un aperçu de nos créations quotidiennes sorties tout droit du fournil.</p>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1549931319-a545dcf3bc73?auto=format&fit=crop&w=600&q=80" alt="Pains traditionnels">
+                        <div class="gallery-overlay"><span>Pains au Levain</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Viennoiseries croustillantes">
+                        <div class="gallery-overlay"><span>Croissants Pur Beurre</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=600&q=80" alt="Baguettes tradition">
+                        <div class="gallery-overlay"><span>Baguettes Tradition</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=600&q=80" alt="Pâtisseries maison">
+                        <div class="gallery-overlay"><span>Pâtisseries Fines</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=600&q=80" alt="Brioches dorées">
+                        <div class="gallery-overlay"><span>Brioches Artisanales</span></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=600&q=80" alt="Snackings frais">
+                        <div class="gallery-overlay"><span>Sandwichs & Formules</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: CONTACT -->
+        <section id="contact" class="tab-content">
+            <div class="container section-padding">
+                <div class="section-title">
+                    <h2>Contactez-Nous</h2>
+                    <p>Une question, une commande spéciale pour un événement ? Écrivez-nous !</p>
+                </div>
+                <div class="grid-2">
+                    <div class="card shadow">
+                        <h3>Envoyez-nous un message</h3>
+                        <form id="contact-form" class="form" action="https://formspree.io/f/mgaowrnl" method="POST">
+                            <div class="form-group">
+                                <label for="name">Votre Nom</label>
+                                <input type="text" id="name" name="nom" required placeholder="Jean Dupont">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Votre Email</label>
+                                <input type="email" id="email" name="email" required placeholder="jean@exemple.fr">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Votre Message</label>
+                                <textarea id="message" name="message" rows="5" required placeholder="Bonjour, j'aimerais commander une pièce montée pour..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary w-full">
+                                <i class="fa-solid fa-paper-plane"></i> Envoyer le message
+                            </button>
+                        </form>
+                        <div id="form-success" class="success-msg hidden">
+                            <i class="fa-solid fa-circle-check"></i> Merci ! Votre message a bien été envoyé.
+                        </div>
+                    </div>
+                    <div class="card shadow contact-info-card">
+                        <h3>Coordonnées Directes</h3>
+                        <p><i class="fa-solid fa-phone"></i> <strong>Téléphone :</strong> 05 63 XX XX XX</p>
+                        <p><i class="fa-solid fa-envelope"></i> <strong>Email :</strong> contact@lafourneedesoual.fr</p>
+                        <p><i class="fa-solid fa-location-dot"></i> <strong>Adresse :</strong> Avenue de Castres, 81580 Soual</p>
+                        
+                        <div class="social-box">
+                            <h4>Suivez nos actualités</h4>
+                            <div class="social-icons">
+                                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#" aria-label="TripAdvisor"><i class="fa-solid fa-utensils"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Boulangerie La Fournée de Soual. Tous droits réservés.</p>
+            <p class="crafted">Artisan Boulanger - Fait avec passion à Soual (81).</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript interactif pour les onglets -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            const mobileMenuToggle = document.getElementById('mobile-menu');
+            const nav = document.querySelector('.nav');
+
+            // Navigation tabs logic
+            navButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(tab => tab.classList.remove('active'));
+
+                    button.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+
+                    // Close mobile menu if open
+                    nav.classList.remove('open');
+                    
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            });
+
+            // Mobile menu toggle
+            mobileMenuToggle.addEventListener('click', () => {
+                nav.classList.toggle('open');
+            });
+
+            // Contact form simulation
+            const contactForm = document.getElementById('contact-form');
+            const formSuccess = document.getElementById('form-success');
+            if(contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    /*e.preventDefault();*/
+                    contactForm.style.display = 'none';
+                    formSuccess.classList.remove('hidden');
+                });
+            }
+        });
+        const contactForm = document.getElementById('contact-form');
+        const formSuccess = document.getElementById('form-success');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async (e) => {
+                e.preventDefault(); // On empêche le rechargement brut de la page
+
+                const formData = new FormData(contactForm);
+
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+
+                    if (response.ok) {
+                        // Si c'est un succès, on cache le formulaire et on affiche le message de remerciement stylisé
+                        contactForm.style.display = 'none';
+                        formSuccess.classList.remove('hidden');
+                    } else {
+                        alert("Une erreur est survenue lors de l'envoi du message.");
+                    }
+                } catch (error) {
+                    alert("Erreur réseau. Veuillez réessayer.");
+                }
+            });
+        }
+    </script>
+</body>
+</html>
