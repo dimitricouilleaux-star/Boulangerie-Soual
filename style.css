@@ -499,6 +499,10 @@ h1, h2, h3, h4 {
     .hero-content h1 {
         font-size: 2.25rem;
     }
+
+    .Time{
+        font-size:0.85rem ;
+    }
 }
 /* Style de la modale des mentions légales */
 .modal-overlay {
