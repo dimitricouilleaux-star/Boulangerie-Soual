@@ -515,6 +515,10 @@ h1, h2, h3, h4 {
 
     .Time{
         font-size:1rem ;
+        display: flex;
+        flex-direction: column; /* Met l'horaire du midi au-dessus et celui du soir en dessous */
+        align-items: flex-end;  /* Aligne-les proprement à droite */
+        gap: 0.4rem;
     }
 
     .barre-pc {
@@ -522,7 +526,9 @@ h1, h2, h3, h4 {
     }
 
     .Phone-only{
-        display: block;
+        display: inline;
+        
+        
     }
     .card{
         padding: 1.5rem 1rem;
