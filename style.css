@@ -421,7 +421,7 @@ h1, h2, h3, h4 {
     gap: 1rem;
 }
 .social-icons a {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     width: 40px;
@@ -433,13 +433,12 @@ h1, h2, h3, h4 {
     transition: var(--transition);
 }
 
-/* On force l'icône à s'aligner parfaitement au centre */
+/* On force l'élément icône à prendre toute la place et à se centrer de force */
 .social-icons a i {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: inline-block;
+    text-align: center;
     width: 100%;
-    height: 100%;
+    line-height: 40px; /* Force la hauteur de ligne égale à la hauteur du cercle */
     margin: 0;
 }
 
