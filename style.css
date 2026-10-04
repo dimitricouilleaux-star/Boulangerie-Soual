@@ -420,7 +420,6 @@ h1, h2, h3, h4 {
     display: flex;
     gap: 1rem;
 }
-
 .social-icons a {
     display: inline-flex;
     align-items: center;
@@ -433,6 +432,17 @@ h1, h2, h3, h4 {
     text-decoration: none;
     transition: var(--transition);
 }
+
+/* On force l'icône à s'aligner parfaitement au centre */
+.social-icons a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
 
 .social-icons a:hover {
     background-color: var(--primary);
