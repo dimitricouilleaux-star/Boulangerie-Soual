@@ -477,7 +477,7 @@ h1, h2, h3, h4 {
 }
 
 /* Responsive */
-@media (max-width: 920px) {
+@media (max-width: 900px) {
     .grid-2 {
         grid-template-columns: 1fr;
         gap: 2rem;
