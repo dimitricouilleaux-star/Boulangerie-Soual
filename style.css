@@ -481,8 +481,13 @@ h1, h2, h3, h4 {
     .grid-2 {
         grid-template-columns: 1fr;
         gap: 2rem;
+        
     }
     
+    .form-group{
+        margin-bottom: 1.25rem;
+    }
+
     .nav {
         display: none;
         flex-direction: column;
@@ -518,6 +523,18 @@ h1, h2, h3, h4 {
 
     .Phone-only{
         display: block;
+    }
+    .card{
+        padding: 1.5rem 1rem;
+    }
+    
+     .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    html, body {
+        overflow-x: hidden;
     }
 }
 /* Style de la modale des mentions légales */
