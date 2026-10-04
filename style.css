@@ -158,7 +158,7 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
-.phone-only{
+.Phone-only{
     display: None;
 }
 
@@ -235,6 +235,10 @@ h1, h2, h3, h4 {
     padding: 2.5rem;
     border-radius: 16px;
     border: 1px solid var(--border-color);
+}
+
+.barre-pc {
+    display: inline; 
 }
 
 .shadow {
@@ -473,7 +477,7 @@ h1, h2, h3, h4 {
 }
 
 /* Responsive */
-@media (max-width: 900px) {
+@media (max-width: 920px) {
     .grid-2 {
         grid-template-columns: 1fr;
         gap: 2rem;
@@ -508,7 +512,11 @@ h1, h2, h3, h4 {
         font-size:1rem ;
     }
 
-    .phone-only{
+    .barre-pc {
+        display: none; /* Elle disparaît sur mobile */
+    }
+
+    .Phone-only{
         display: block;
     }
 }
