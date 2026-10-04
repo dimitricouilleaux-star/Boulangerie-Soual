@@ -4,12 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boulangerie Artisanale de Soual</title>
+    
+    <!-- 1. Titre optimisé pour le référencement (SEO) -->
+    <title>Boulangerie Artisanale | La Fournée de Soual</title>
+    <link rel="icon" type="image/jpg" href="pngtree-realistic-french-croissant-png-image_14700026.png">
+    
+    <!-- 2. Description pour Google (ce qui s'affiche dans les résultats de recherche) -->
+    <meta name="description" content="Découvrez notre boulangerie artisanale à Soual. Pains au levain naturel, viennoiseries pur beurre et pâtisseries maison faites avec passion.">
+    
+    <!-- 3. Lien vers votre feuille de style CSS externe -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- 4. Polices d'écriture Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- 5. Icônes (FontAwesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- 6. Balises Open Graph (pour que le site s'affiche proprement quand on partage le lien sur Facebook, WhatsApp, etc.) -->
+    <meta property="og:title" content="Boulangerie La Fournée de Soual">
+    <meta property="og:description" content="Pains artisanaux, viennoiseries et gourmandises au cœur de Soual.">
+    <meta property="og:type" content="website">
 </head>
 <body>
 
@@ -180,6 +197,9 @@
                             <button type="submit" class="btn-primary w-full">
                                 <i class="fa-solid fa-paper-plane"></i> Envoyer le message
                             </button>
+                            <p class="form-legal-notice" style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.75rem;">
+                            En soumettant ce formulaire, vous acceptez que vos informations soient utilisées pour vous recontacter. Aucune utilisation commerciale n'est faite de vos données.
+                            </p>
                         </form>
                         <div id="form-success" class="success-msg hidden">
                             <i class="fa-solid fa-circle-check"></i> Merci ! Votre message a bien été envoyé.
@@ -211,8 +231,38 @@
         <div class="container footer-content">
             <p>&copy; 2026 Boulangerie La Fournée de Soual. Tous droits réservés.</p>
             <p class="crafted">Artisan Boulanger - Fait avec passion à Soual (81).</p>
+            <p style="margin-top: 0.5rem;">
+                <a href="#" id="open-legal-link" style="color: #9ca3af; font-size: 0.8rem; text-decoration: underline;">Mentions Légales & RGPD</a>
+            </p>
         </div>
     </footer>
+
+    <!-- Fenêtre modale des Mentions Légales (cachée par défaut) -->
+    <div id="legal-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button id="close-legal" class="modal-close">&times;</button>
+            <h2>Mentions Légales & Politique de Confidentialité</h2>
+            
+            <h3>1. Informations légales</h3>
+            <p><strong>Nom de l'entreprise :</strong> La Fournée de Soual<br>
+            <strong>Adresse :</strong> Avenue de Castres, 81580 Soual, France<br>
+            <strong>Téléphone :</strong> 05 63 XX XX XX<br>
+            <strong>Email :</strong> contact@lafourneedesoual.fr</p>
+
+            <h3>2. Hébergement</h3>
+            <p>Le site est hébergé par :<br>
+            <strong>GitHub Inc.</strong><br>
+            88 Colin P Kelly Jr St, San Francisco, CA 94107, États-Unis<br>
+            Site web : <a href="https://pages.github.com" target="_blank">https://pages.github.com</a></p>
+
+            <h3>3. Collecte des données personnelles (RGPD)</h3>
+            <p>Les informations recueillies via le formulaire de contact sont enregistrées par <em>La Fournée de Soual</em> afin de répondre aux demandes. Elles sont transmises par e-mail via <em>Formspree</em> et ne sont jamais cédées à des tiers.</p>
+            <p><strong>Durée de conservation :</strong> 1 an maximum.</p>
+            
+            <h3>4. Vos droits</h3>
+            <p>Conformément au RGPD, vous disposez d'un droit d'accès et de suppression de vos données en contactant : <code>contact@lafourneedesoual.fr</code>.</p>
+        </div>
+    </div>
 
     <!-- JavaScript interactif pour les onglets -->
     <script>
@@ -283,6 +333,30 @@
                     }
                 } catch (error) {
                     alert("Erreur réseau. Veuillez réessayer.");
+                }
+            });
+        }
+
+        /*Pour le RGPD*/
+        // Gestion de la modale Mentions Légales
+        const openLegalLink = document.getElementById('open-legal-link');
+        const legalModal = document.getElementById('legal-modal');
+        const closeLegalBtn = document.getElementById('close-legal');
+
+        if (openLegalLink && legalModal && closeLegalBtn) {
+            openLegalLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                legalModal.classList.add('active');
+            });
+
+            closeLegalBtn.addEventListener('click', () => {
+                legalModal.classList.remove('active');
+            });
+
+            // Fermer si on clique en dehors de la fenêtre blanche
+            legalModal.addEventListener('click', (e) => {
+                if (e.target === legalModal) {
+                    legalModal.classList.remove('active');
                 }
             });
         }
