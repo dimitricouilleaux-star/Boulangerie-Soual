@@ -33,10 +33,10 @@
     <!-- Header & Navigation -->
     <header class="header">
         <div class="container header-container">
-            <div class="logo">
+            <a href="#" id="logo-home" class="logo">
                 <i class="fa-solid fa-wheat-awn"></i>
                 <span>La Fournée de Soual</span>
-            </div>
+            </a>
             <nav class="nav">
                 <button class="nav-btn active" data-tab="histoire">
                     <i class="fa-solid fa-book-open"></i> Notre Histoire
@@ -360,6 +360,39 @@
                 }
             });
         }
+                // Retour à l'accueil / Notre Histoire au clic sur le logo
+        const logoHome = document.getElementById('logo-home');
+        if (logoHome) {
+            logoHome.addEventListener('click', (e) => {
+                e.preventDefault(); // Empêche le rechargement de la page
+
+                // On cible directement le bouton et l'onglet "histoire"
+                const histoireBtn = document.querySelector('.nav-btn[data-tab="histoire"]');
+                const histoireTab = document.getElementById('histoire');
+
+                if (histoireBtn && histoireTab) {
+                    // Retire la classe active de tous les boutons et onglets
+                    const navButtons = document.querySelectorAll('.nav-btn');
+                    const tabContents = document.querySelectorAll('.tab-content');
+
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(tab => tab.classList.remove('active'));
+
+                    // Active spécifiquement "Notre Histoire"
+                    histoireBtn.classList.add('active');
+                    histoireTab.classList.add('active');
+                }
+
+                // Ferme le menu mobile s'il était ouvert
+                const nav = document.querySelector('.nav');
+                if (nav) {
+                    nav.classList.remove('open');
+                }
+
+                // Remonte en haut de la page en douceur
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+}
     </script>
 </body>
 </html>
